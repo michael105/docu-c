@@ -1,0 +1,97 @@
+--------------
+
+--------------
+
+PUTC(3) BSD Library Functions Manual PUTC(3)
+
+\**NAME*\*
+
+\**fputc**, \**putc**, \**putc_unlocked**, \**putchar**,
+\**putchar_unlocked**, \**putw*\* â output a character or word to a
+stream
+
+\**LIBRARY*\*
+
+Standard CÂ Library (libc, âlc)
+
+\**SYNOPSIS*\*
+
+\**#include <stdio.h>*\*
+
+\*int\*
+
+\**fputc** (*intÂ c*, \*FILEÂ *stream*);
+
+\*int\*
+
+\**putc** (*intÂ c*, \*FILEÂ *stream*);
+
+\*int\*
+
+\**putc_unlocked** (*intÂ c*, \*FILEÂ *stream*);
+
+\*int\*
+
+\**putchar** (*intÂ c*);
+
+\*int\*
+
+\**putchar_unlocked** (*intÂ c*);
+
+\*int\*
+
+\**putw** (*intÂ w*, \*FILEÂ *stream*);
+
+\**DESCRIPTION*\*
+
+The \**fputc** () function writes the character \*c\* (converted to an
+ââunsigned charââ) to the output stream pointed to by \*stream*.
+
+The \**putc** () macro acts essentially identically to \**fputc** (),
+but is a macro that expands in-line. It may evaluate \*stream\* more
+than once, so arguments given to \**putc** () should not be expressions
+with potential side effects.
+
+The \**putchar** () function is identical to \**putc** () with an output
+stream of stdout.
+
+The \**putw** () function writes the specified \*int\* to the named
+output \*stream*.
+
+The \**putc_unlocked** () and \**putchar_unlocked** () functions are
+equivalent to \**putc** () and \**putchar** () respectively, except that
+the caller is responsible for locking the stream with flockfile(3)
+before calling them. These functions may be used to avoid the overhead
+of locking the stream for each character, and to avoid output being
+interspersed from multiple threads writing to the same stream.
+
+\**RETURN VALUES*\*
+
+The functions, \**fputc** (), \**putc** (), \**putchar** (),
+\**putc_unlocked** () and \**putchar_unlocked** () return the character
+written. If an error occurs, the value EOF is returned. The \**putw** ()
+function returns 0 on success; EOF is returned if a write error occurs,
+or if an attempt is made to write a read-only stream.
+
+\**SEE ALSO*\*
+
+ferror(3), flockfile(3), fopen(3), getc(3), putwc(3), stdio(3)
+
+\**STANDARDS*\*
+
+The functions \**fputc** (), \**putc** (), and \**putchar** (), conform
+to ISO/IEC 9899:1990 (ââISOÂ C90ââ). The \**putc_unlocked** () and
+\**putchar_unlocked** () functions conform to IEEE Std 1003.1-2001
+(ââPOSIX.1ââ). A function \**putw** () function appeared in VersionÂ 6
+AT&T UNIX.
+
+\**BUGS*\*
+
+The size and byte order of an \*int\* varies from one machine to
+another, and \**putw** () is not recommended for portable applications.
+
+BSD JanuaryÂ 10, 2003 BSD
+
+--------------
+
+--------------
