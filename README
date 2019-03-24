@@ -2,5 +2,17 @@ Some docs, about programming with C.
 Compiled them here together for convenience,
 and converted them to other formatings.
 
-I have pointed out the sources.
+The man pages in bsd-libc/man are from freeBSD,
+(BSD-License).
+I converted them to .rst.
+
+The other docs are collected from the web,
+I've pointed the sources out.
+
+Mainly I try to sort these information for my own,
+but possibly it's also of use for others.
+
+I did have these documentation originally within the minilib git,
+but uploading a huge bunch of documentation into a "mini"-lib repository
+doesn't seem so wise.
 
