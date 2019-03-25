@@ -1,0 +1,188 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+		<title>ANSI Colors</title>
+		<link href="../info.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+		<meta name="description" content="VT100 Control Codes.">
+		<meta http-equiv="pragma" content="no-cache">
+	</head>
+
+	<body>
+		<table width='100%' height='40' align='top'>
+			<tr>
+				<td width='143'></td>
+				<td width='70%' align='left' class='title'>ANSI Colors</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+
+		<table width='135' align='left'>
+			<tr>
+				<td class='sidebar'>
+
+ANSI<br>
+<a href="#ABOUT">• About</a><br>
+<a href="#CODES">• Codes</a><br>
+<a href="#PALETTE">• Palette</a><br>
+<a href="#SUPPORT">• Support</a><br>
+<a href="#DETECTION">• Detection</a><br>
+<a href="#LINKS">• Links</a><br>
+<br>
+ANSI<br>
+<a href="/info/256color">256COLOR</a><br>
+<a href="/info/truecolor">TRUECOLOR</a><br>
+<a href="/info/vt100">VT100</a>				</td>
+			</tr>
+			<tr>
+				<td width='135' height='36' style='background-color:#88BBEE; border:1px solid #660000;'>
+					<center><a href="http://sourceforge.net/projects/tintin"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=137339&type=14" width="135" height="36" border="0" alt="Get TinTin++ Mud Client at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a></center>
+				</td>
+			</tr>
+		</table>
+
+
+		<table width='10' height='100%' align="left">
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+
+		<table width='70%' align="left">
+
+<tr><td class='promo'><a name='ABOUT'></a></td></tr><tr><td></td></tr>
+<tr><td class='promo'>ANSI escape codes are a standard for in-band signaling to control the cursor location, color, and other options on text terminals. The ANSI x3.64 standard was released in 1979 and later updated by the 5th edition ECMA-48 standard in 1991, ISO/IEC 6429 in 1992, and ISO-8613-3 in 1995.</td></tr><tr><td></td></tr>
+<tr><td class='promo'>ANSI escape codes are started using \e[ and contain numeric codes separated by semicolons. The escape code is terminated with an 'm'.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a name='CODES'></a></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'><strong><big>ANSI Color Codes</big></strong></td></tr><tr><td></td></tr>
+<tr><td colspan='1'><hr noshade color='#2B3856'></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'>ANSI Color Escape Sequences</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><table border="0">
+	<tr> <td width="250" class="menubar"><b>Code</b></td> <td width="200" class="menubar"><b>Effect</b></td> <td width="600" class="menubar"><b>Note</b></td> </tr>
+	<tr> <td width="250" class="menubar">\e [</td> <td width="200" class="menubar">CSI</td> <td width="600" class="menubar">Control Sequence Indicator</td> </tr>
+	<tr> <td width="250" class="menubar">CSI <i>n</i> m</td> <td width="200" class="menubar">ANSICOLOR</td> <td width="600" class="menubar">ANSI color code (Select Graphic Rendition)</td> </tr>
+	<tr> <td width="250" class="menubar">CSI 38 ; 5 ; <i>n</i> m</td> <td width="200" class="menubar">256COLOR</td> <td width="600" class="menubar">Foreground 8 bit 256 color code</td> </tr>
+	<tr> <td width="250" class="menubar">CSI 48 ; 5 ; <i>n</i> m</td> <td width="200" class="menubar">256COLOR</td> <td width="600" class="menubar">Background 8 bit 256 color code</td> </tr>
+	<tr> <td width="250" class="menubar">CSI 38 ; 2 ; <i>r</i> ; <i>g</i> ; <i>b</i> m</td> <td width="200" class="menubar">TRUECOLOR</td> <td width="600" class="menubar">Foreground 24 bit rgb color code</td> </tr>
+	<tr> <td width="250" class="menubar">CSI 48 ; 2 ; <i>r</i> ; <i>g</i> ; <i>b</i> m</td> <td width="200" class="menubar">TRUECOLOR</td> <td width="600" class="menubar">Background 24 bit rgb color code</td> </tr>
+	</table></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'>ANSI Color Options</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><table border="0">
+	<tr> <td width="250" class="menubar"><b>Code</b></td> <td width="100" class="menubar"><b>Effect</b></td> <td width="400" class="menubar"><b>Note</b></td> </tr>
+	<tr> <td width="250" class="menubar">0</td> <td width="200" class="menubar">Reset</td> <td width="600" class="menubar">Set color and display state to default</td> </tr>
+	<tr> <td width="250" class="menubar">1</td> <td width="200" class="menubar">Bold</td>  <td width="600" class="menubar">Set color intensity to bold</td> </tr>
+	<tr> <td width="250" class="menubar">2</td> <td width="200" class="menubar">Faint</td>  <td width="600" class="menubar">Set color intensity to faint</td> </tr>
+	<tr> <td width="250" class="menubar">3</td> <td width="200" class="menubar">Italic</td>  <td width="600" class="menubar">Display text as italic</td> </tr>
+	<tr> <td width="250" class="menubar">4</td> <td width="200" class="menubar">Underline</td>  <td width="600" class="menubar">Display text as underline</td> </tr>
+	<tr> <td width="250" class="menubar">5</td> <td width="200" class="menubar">Slow blink</td> <td width="600" class="menubar">Blink less than 150 times a minute</td> </tr>
+	<tr> <td width="250" class="menubar">6</td> <td width="200" class="menubar">Fast blink</td> <td width="600" class="menubar">Blink 150 times a minute or more</td> </tr>
+	<tr> <td width="250" class="menubar">7</td> <td width="200" class="menubar">Reverse video</td> <td width="600" class="menubar">Reverse foreground and background colors</td> </tr>
+	<tr> <td width="250" class="menubar">8</td> <td width="200" class="menubar">Erase</td> <td width="600" class="menubar">Display text as blank spaces</td> </tr>
+	<tr> <td width="250" class="menubar">9</td> <td width="200" class="menubar">Strikethrough</td> <td width="600" class="menubar">Display text as strikethrough</td> </tr>
+
+	<tr> <td width="250" class="menubar">21</td> <td width="200" class="menubar">Double underline</td> <td width="600" class="menubar"></td> </tr>
+ 	<tr> <td width="250" class="menubar">22</td> <td width="200" class="menubar">Bold: off</td> <td width="600" class="menubar">Set color intensity to default</td> </tr>
+	<tr> <td width="250" class="menubar">23</td> <td width="200" class="menubar">Italic: off</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">24</td> <td width="200" class="menubar">Underline: off</td> <td width="600" class="menubar">Neither single or double</td></tr>
+	<tr> <td width="250" class="menubar">25</td> <td width="200" class="menubar">Slow blink: off</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">26</td> <td width="200" class="menubar">Fast blink: off</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">27</td> <td width="200" class="menubar">Reverse video: off</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">28</td> <td width="200" class="menubar">Erase: off</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">29</td> <td width="200" class="menubar">Strikethrough: Off</td> <td width="600" class="menubar"></td> </tr>
+
+	<tr> <td width="250" class="menubar">30</td> <td width="200" class="menubar">Foreground: black</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">31</td> <td width="200" class="menubar">Foreground: red</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">32</td> <td width="200" class="menubar">Foreground: green</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">33</td> <td width="200" class="menubar">Foreground: yellow</td> <td width="600" class="menubar">Faint yellow often looks brown</td> </tr>
+	<tr> <td width="250" class="menubar">34</td> <td width="200" class="menubar">Foreground: blue</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">35</td> <td width="200" class="menubar">Foreground: magenta</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">36</td> <td width="200" class="menubar">Foreground: cyan</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">37</td> <td width="200" class="menubar">Foreground: white</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">39</td> <td width="200" class="menubar">Foreground: reset</td> <td width="600" class="menubar">Reset foreground color to default</td> </tr>
+
+	<tr> <td width="250" class="menubar">40</td> <td width="200" class="menubar">Background: black</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">41</td> <td width="200" class="menubar">Background: red</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">42</td> <td width="200" class="menubar">Background: green</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">43</td> <td width="200" class="menubar">Background: yellow</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">44</td> <td width="200" class="menubar">Background: blue</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">45</td> <td width="200" class="menubar">Background: magenta</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">46</td> <td width="200" class="menubar">Background: cyan</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">47</td> <td width="200" class="menubar">Background: white</td> <td width="600" class="menubar"></td> </tr>
+	<tr> <td width="250" class="menubar">49</td> <td width="200" class="menubar">Background: reset</td> <td width="600" class="menubar">Reset backround color to default</td> </tr>
+
+	</table></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'>ANSI Color RGB Values</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'>The 24 bit RGB values used for the 16 ANSI colors differ greatly for each terminal implementation. Below is a system that is both consistent and 12 bit compatible.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><table border="0">
+	<tr> <td width="100" class="menubar"><b>Code</b></td>   <td width="100" class="menubar">0</td> <td width="100" class="menubar">1</td> <td width="100" class="menubar">2</td> <td width="100" class="menubar">3</td> <td width="100" class="menubar">4</td> <td width="100" class="menubar">5</td> <td width="100" class="menubar">6</td> <td width="100" class="menubar">7</td> </tr>
+	<tr> <td width="100" class="menubar"><b>Name</b></td>   <td width="100" class="menubar">Black</td> <td width="100" class="menubar">Red</td> <td width="100" class="menubar">Green</td> <td width="100" class="menubar">Yellow</td> <td width="100" class="menubar">Blue</td> <td width="100" class="menubar">Magenta</td> <td width="100" class="menubar">Cyan</td> <td width="100" class="menubar">White</td> </tr>
+	<tr> <td width="100" class="menubar"><b>Normal</b></td> <td width="100" class="menubar" style="background-color:#000;color:#000">000000</td> <td width="100" class="menubar" style="background-color:#000;color:#A00">AA0000</td> <td width="100" class="menubar" style="background-color:#000;color:#0A0">00AA00</td> <td width="100" class="menubar" style="background-color:#000;color:#AA0">AAAA00</td> <td width="100" class="menubar" style="background-color:#000;color:#00A">0000AA</td> <td width="100" class="menubar" style="background-color:#000;color:#A0A">AA00AA</td> <td width="100" class="menubar" style="background-color:#000;color:#0AA">00AAAA</td> <td width="100" class="menubar" style="background-color:#000;color:#AAA">AAAAAA</td> </tr>
+	<tr> <td width="100" class="menubar"><b>Bold</b</td>    <td width="100" class="menubar" style="background-color:#000;color:#555">555555</td> <td width="100" class="menubar" style="background-color:#000;color:#F55">FF5555</td> <td width="100" class="menubar" style="background-color:#000;color:#5F5">55FF55</td> <td width="100" class="menubar" style="background-color:#000;color:#FF5">FFFF55</td> <td width="100" class="menubar" style="background-color:#000;color:#55F">5555FF</td> <td width="100" class="menubar" style="background-color:#000;color:#F5F">FF55FF</td> <td width="100" class="menubar" style="background-color:#000;color:#5FF">55FFFF</td> <td width="100" class="menubar" style="background-color:#000;color:#FFF">FFFFFF</td> </tr>
+	</table></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a name='PALETTE'></a></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'>OSC Color Palette</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'>The OSC color palette is an extension to the ANSI color standard using a modification of the Operating System Command sequence, documented in the Linux console manual as early as 1996. Support has been added by a handful of terminal emulators, most notably xterm. The extension allows changing the default 16 ANSI colors using a 24 bit RGB value in hexadecimal notation.</td></tr><tr><td></td></tr>
+<tr><td class='promo'>To send an OSC color palette code one must print \e]P followed by 1 hexadecimal number indicating one of the 16 ANSI colors, followed by 6 hexadecimal numbers to set a corresponding RGB value. Colors can be reset to their default by printing \e]R. The terminal's default foreground and background color cannot be changed.</td></tr><tr><td></td></tr>
+<tr><td class='promo'>The default blue ANSI color is hard to read on a black background. To set it to a lighter shade of blue one would print "\e]P43333BB", and to display the updated color one would print "\e[22;34m".</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a name='SUPPORT'></a></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'><strong><big>Support</strong></big></td></tr><tr><td></td></tr>
+<tr><td class='promo'>ANSI color support in MUD clients is generally weak. Universally supported codes are 0 and 1, as well as code 30-37.</td></tr><tr><td></td></tr>
+<tr><td class='promo'>Terminal emulators generally support background colors as well as code 4, 5, 7, 9, and 22.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a name='DETECTION'></a></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'><strong><big>Detection</strong></big></td></tr><tr><td></td></tr>
+<tr><td class='promo'>There is no universal standard for the detection or negotiation of ANSI color support. The following methods exist:</td></tr><tr><td></td></tr>
+<tr><td class='promo'><table><ul>
+		<tr><td>By using the TTYPE TELNET option and checking for a terminal emulator or mud client known to support ANSI colors, such as xterm.</td></tr>
+		<tr><td>By using the TTYPE TELNET option and checking for the -color, -256color, or -truecolor suffix. For example: xterm-color.</td></tr>
+		<tr><td>By using the TTYPE TELNET option and using the <a href='http://tintin.sf.net/mtts'>MUD Terminal Type Standard</a> to detect ANSI color support.</tr></td>
+		</ul></table></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a name='LINKS'></a></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'><strong><big>Links</strong</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'>If you want a link added, you can email me at mudclient@gmail.com.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><strong><big>Clients supporting ANSI color</big></strong></td></tr><tr><td></td></tr>
+<tr><td colspan='1'><hr noshade color='#2B3856'></td></tr><tr><td></td></tr>
+<tr><td class='promo'>Virtually all MUD clients and terminal emulators support ANSI color.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><strong><big>Codebases</big></strong></td></tr><tr><td></td></tr>
+<tr><td colspan='1'><hr noshade color='#2B3856'></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a href='http://www.mudpedia.org/mediawiki/index.php/Comparison_of_MUD_codebases'>Comparison of MUD codebases</a> - Mudpedia contains a list of MUD servers with ANSI color support.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><strong><big>Snippets</big></strong></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a href='http://www.mudbytes.net/files/2596'>256 color parser</a> - Handles ANSI 16 colors and xterm 256 colors.</td></tr><tr><td></td></tr>
+<tr><td colspan='1'><hr noshade color='#2B3856'></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br>&nbsp;<br>&nbsp;<br>&nbsp;<br></td></tr><tr><td></td></tr>
+
+
+		</table>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1978623-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+	</body>
+
+</html>

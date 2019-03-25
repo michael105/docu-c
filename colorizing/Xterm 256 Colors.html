@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+	<head>
+		<title>Xterm 256 Colors</title>
+		<link href="../info.css" rel="stylesheet" type="text/css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+		<meta name="description" content="Xterm 256 Colors.">
+		<meta http-equiv="pragma" content="no-cache">
+	</head>
+
+	<body>
+		<table width='100%' height='40' align='top'>
+			<tr>
+				<td width='143'></td>
+				<td width='70%' align='left' class='title'>Xterm 256 Colors</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+
+		<table width='135' align='left'>
+			<tr>
+				<td class='sidebar'>
+
+256COLOR<br>
+<a href="#ABOUT">• About</a><br>
+<a href="#CODES">• Codes</a><br>
+<a href="#RGB">• RGB Values</a><br>
+<a href="#SUPPORT">• Support</a><br>
+<a href="#DETECTION">• Detection</a><br>
+<a href="#LINKS">• Links</a><br>
+<br>
+<a href="/info/ansicolor">ANSI</a><br>
+256COLOR<br>
+<a href="/info/truecolor">TRUECOLOR</a><br>
+<a href="/info/vt100">VT100</a>				</td>
+			</tr>
+			<tr>
+				<td width='135' height='36' style='background-color:#88BBEE; border:1px solid #660000;'>
+					<center><a href="http://sourceforge.net/projects/tintin"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=137339&type=14" width="135" height="36" border="0" alt="Get TinTin++ Mud Client at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a></center>
+				</td>
+			</tr>
+		</table>
+
+
+		<table width='10' height='100%' align="left">
+			<tr>
+				<td></td>
+			</tr>
+		</table>
+
+		<table width='70%' align="left">
+
+<tr><td class='promo'><a name='ABOUT'></a></td></tr><tr><td></td></tr>
+<tr><td class='promo'>Support for 256 colors was added to xterm in 1999 by its maintainer Thomas Dickey, using a patch created by Todd Larason. It's an extension to the ANSI color standard using a compatible format and has been adopted by most terminal emulators and MUD clients.</td></tr><tr><td></td></tr>
+<tr><td class='promo'>To send a 256 color foreground color one must print "\e[38;5;#m" where # is a number between 0 and 255. For background colors one must print "\e[48;5;#m" where # behaves in the same manner as foreground colors.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a name='CODES'></a></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'><strong><big>256 Color Codes</big></strong></td></tr><tr><td></td></tr>
+<tr><td colspan='1'><hr noshade color='#2B3856'></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'>256 Color Escape Sequences</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><table border="0">
+	<tr> <td width="250" class="menubar"><b>Code</b></td> <td width="200" class="menubar"><b>Effect</b></td> <td width="600" class="menubar"><b>Note</b></td> </tr>
+	<tr> <td width="250" class="menubar">\e [</td> <td width="200" class="menubar">CSI</td> <td width="600" class="menubar">Control Sequence Indicator</td> </tr>
+	<tr> <td width="250" class="menubar">CSI <i>n</i> m</td> <td width="200" class="menubar">ANSICOLOR</td> <td width="600" class="menubar">ANSI color code (Select Graphic Rendition)</td> </tr>
+	<tr> <td width="250" class="menubar">CSI 38 ; 5 ; <i>n</i> m</td> <td width="200" class="menubar">256COLOR</td> <td width="600" class="menubar">Foreground 8 bit 256 color code</td> </tr>
+	<tr> <td width="250" class="menubar">CSI 48 ; 5 ; <i>n</i> m</td> <td width="200" class="menubar">256COLOR</td> <td width="600" class="menubar">Background 8 bit 256 color code</td> </tr>
+	<tr> <td width="250" class="menubar">CSI 38 ; 2 ; <i>r</i> ; <i>g</i> ; <i>b</i> m</td> <td width="200" class="menubar">TRUECOLOR</td> <td width="600" class="menubar">Foreground 24 bit rgb color code</td> </tr>
+	<tr> <td width="250" class="menubar">CSI 48 ; 2 ; <i>r</i> ; <i>g</i> ; <i>b</i> m</td> <td width="200" class="menubar">TRUECOLOR</td> <td width="600" class="menubar">Background 24 bit rgb color code</td> </tr>
+	</table></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'>256 Color Options</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><table border="0">
+	<tr> <td width="250" class="menubar"><b>Code</b></td> <td width="100" class="menubar"><b>Effect</b></td> <td width="400" class="menubar"><b>Note</b></td> </tr>
+	<tr> <td width="250" class="menubar">0-7</td> <td width="200" class="menubar">8 colors: normal</td> <td width="600" class="menubar">The traditional 8 ANSI colors in normal intensity</td> </tr>
+	<tr> <td width="250" class="menubar">8-15</td> <td width="200" class="menubar">8 colors: bold</td>  <td width="600" class="menubar">The traditional 8 ANSI colors in bold intensity</td> </tr>
+	<tr> <td width="250" class="menubar">16-231</td> <td width="200" class="menubar">216 colors: rgb</td>  <td width="600" class="menubar">Each RGB color has a value between 0 and 5. Red is multiplied by 36, Green by 6, and Blue by 1.</td> </tr>
+	<tr> <td width="250" class="menubar">232-255</td> <td width="200" class="menubar">24 colors: grayscale</td>  <td width="600" class="menubar">24 shades of gray, not including black and white</td> </tr>
+
+	</table></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a name='RGB'></a></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'>256 Color RGB Values</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'>To display code 0 through 15 using 24 bit RGB colors the following hexadecimal values are suggested: \x00 and \xAA for normal intensities, and \x55 and \xxFF for bold intensities.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><table border="0">
+	<tr> <td width="100" class="menubar"><b>Name</b></td>   <td width="100" class="menubar">Black</td> <td width="100" class="menubar">Red</td> <td width="100" class="menubar">Green</td> <td width="100" class="menubar">Yellow</td> <td width="100" class="menubar">Blue</td> <td width="100" class="menubar">Magenta</td> <td width="100" class="menubar">Cyan</td> <td width="100" class="menubar">White</td> </tr>
+	<tr> <td width="100" class="menubar"><b>Code</b></td>   <td width="100" class="menubar">0</td> <td width="100" class="menubar">1</td> <td width="100" class="menubar">2</td> <td width="100" class="menubar">3</td> <td width="100" class="menubar">4</td> <td width="100" class="menubar">5</td> <td width="100" class="menubar">6</td> <td width="100" class="menubar">7</td> </tr>
+	<tr> <td width="100" class="menubar"><b>Normal</b></td> <td width="100" class="menubar" style="background-color:#000;color:#000">000000</td> <td width="100" class="menubar" style="background-color:#000;color:#A00">AA0000</td> <td width="100" class="menubar" style="background-color:#000;color:#0A0">00AA00</td> <td width="100" class="menubar" style="background-color:#000;color:#AA0">AAAA00</td> <td width="100" class="menubar" style="background-color:#000;color:#00A">0000AA</td> <td width="100" class="menubar" style="background-color:#000;color:#A0A">AA00AA</td> <td width="100" class="menubar" style="background-color:#000;color:#0AA">00AAAA</td> <td width="100" class="menubar" style="background-color:#000;color:#AAA">AAAAAA</td> </tr>
+	<tr> <td width="100" class="menubar"><b>Code</b></td>   <td width="100" class="menubar">8</td> <td width="100" class="menubar">9</td> <td width="100" class="menubar">10</td> <td width="100" class="menubar">11</td> <td width="100" class="menubar">12</td> <td width="100" class="menubar">13</td> <td width="100" class="menubar">13</td> <td width="100" class="menubar">15</td> </tr>
+	<tr> <td width="100" class="menubar"><b>Bold</b</td>    <td width="100" class="menubar" style="background-color:#000;color:#555">555555</td> <td width="100" class="menubar" style="background-color:#000;color:#F55">FF5555</td> <td width="100" class="menubar" style="background-color:#000;color:#5F5">55FF55</td> <td width="100" class="menubar" style="background-color:#000;color:#FF5">FFFF55</td> <td width="100" class="menubar" style="background-color:#000;color:#55F">5555FF</td> <td width="100" class="menubar" style="background-color:#000;color:#F5F">FF55FF</td> <td width="100" class="menubar" style="background-color:#000;color:#5FF">55FFFF</td> <td width="100" class="menubar" style="background-color:#000;color:#FFF">FFFFFF</td> </tr>
+	</table></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'>To display code 16 through 231 using 24 bit RGB colors the following hexadecimal values are suggested for the 6 intensities on a black background: 00, 66, 88, BB, DD, and FF. The 216 RGB color variants can be separated into three achromatic colors, three primary colors, three secondary colors, and six tertiary colors. In the ANSI tradition these can be split into dim and bold intensities. To calculate the color code multiply the red intensity by 36, the green intensity by 6, the blue intensity by 1, and add 16 for the offset.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><table border="0">
+	<tr> <td width="200" class="menubar"><b>Name</b></td>   <td width="200" class="menubar"><b>Code</b></td> <td width="200" class="menubar"><b>Dim</b></td> <td width="200" class="menubar"><b>Code</b></td> <td width="200" class="menubar"><b>Bold</b></td> </tr>
+	<tr> <td width="200" class="menubar">Azure</td>   <td width="200" class="menubar">025</b></td> <td width="200" class="menubar" style="background-color:#000;color:#06B">0066BB</td> <td width="200" class="menubar">033</b></td> <td width="200" class="menubar" style="background-color:#000;color:#08F">0088FF</td></tr>
+	<tr> <td width="200" class="menubar">Blue</td>    <td width="200" class="menubar">019</b></td> <td width="200" class="menubar" style="background-color:#000;color:#00B">0000BB</td> <td width="200" class="menubar">021</b></td> <td width="200" class="menubar" style="background-color:#000;color:#00F">0000FF</td></tr>
+	<tr> <td width="200" class="menubar">Cyan</td>    <td width="200" class="menubar">037</b></td> <td width="200" class="menubar" style="background-color:#000;color:#0BB">00BBBB</td> <td width="200" class="menubar">051</b></td> <td width="200" class="menubar" style="background-color:#000;color:#0FF">00FFFF</td></tr>
+	<tr> <td width="200" class="menubar">Ebony</td>   <td width="200" class="menubar">016</b></td> <td width="200" class="menubar" style="background-color:#000;color:#000">000000</td> <td width="200" class="menubar">059</b></td> <td width="200" class="menubar" style="background-color:#000;color:#666">666666</td></tr>
+	<tr> <td width="200" class="menubar">Green</td>   <td width="200" class="menubar">034</b></td> <td width="200" class="menubar" style="background-color:#000;color:#0B0">00BB00</td> <td width="200" class="menubar">046</b></td> <td width="200" class="menubar" style="background-color:#000;color:#0F0">00FF00</td></tr>	
+	<tr> <td width="200" class="menubar">Jade</td>    <td width="200" class="menubar">035</b></td> <td width="200" class="menubar" style="background-color:#000;color:#0B6">00BB66</td> <td width="200" class="menubar">048</b></td> <td width="200" class="menubar" style="background-color:#000;color:#0F8">00FF88</td></tr>
+	<tr> <td width="200" class="menubar">Lime</td>    <td width="200" class="menubar">070</b></td> <td width="200" class="menubar" style="background-color:#000;color:#6B0">66BB00</td> <td width="200" class="menubar">118</b></td> <td width="200" class="menubar" style="background-color:#000;color:#8F0">88FF00</td></tr>
+	<tr> <td width="200" class="menubar">Magenta</td> <td width="200" class="menubar">127</b></td> <td width="200" class="menubar" style="background-color:#000;color:#B0B">BB00BB</td> <td width="200" class="menubar">201</b></td> <td width="200" class="menubar" style="background-color:#000;color:#F0F">FF00FF</td></tr>
+	<tr> <td width="200" class="menubar">Orange</td>  <td width="200" class="menubar">130</b></td> <td width="200" class="menubar" style="background-color:#000;color:#B60">BB6600</td> <td width="200" class="menubar">208</b></td> <td width="200" class="menubar" style="background-color:#000;color:#F80">FF8800</td></tr>
+	<tr> <td width="200" class="menubar">Pink</td>    <td width="200" class="menubar">125</b></td> <td width="200" class="menubar" style="background-color:#000;color:#B06">BB0066</td> <td width="200" class="menubar">198</b></td> <td width="200" class="menubar" style="background-color:#000;color:#F08">FF0088</td></tr>
+	<tr> <td width="200" class="menubar">Red</td>     <td width="200" class="menubar">124</b></td> <td width="200" class="menubar" style="background-color:#000;color:#B00">BB0000</td> <td width="200" class="menubar">196</b></td> <td width="200" class="menubar" style="background-color:#000;color:#F00">FF0000</td></tr>	
+	<tr> <td width="200" class="menubar">Silver</td>  <td width="200" class="menubar">102</b></td> <td width="200" class="menubar" style="background-color:#000;color:#888">888888</td> <td width="200" class="menubar">188</b></td> <td width="200" class="menubar" style="background-color:#000;color:#DDD">DDDDDD</td></tr>	
+	<tr> <td width="200" class="menubar">Tan</td>     <td width="200" class="menubar">094</b></td> <td width="200" class="menubar" style="background-color:#000;color:#860">886600</td> <td width="200" class="menubar">178</b></td> <td width="200" class="menubar" style="background-color:#000;color:#DB0">DDBB00</td></tr>
+	<tr> <td width="200" class="menubar">Violet</td>  <td width="200" class="menubar">055</b></td> <td width="200" class="menubar" style="background-color:#000;color:#60B">6600BB</td> <td width="200" class="menubar">093</b></td> <td width="200" class="menubar" style="background-color:#000;color:#80F">8800FF</td></tr>
+	<tr> <td width="200" class="menubar">White</td>   <td width="200" class="menubar">145</b></td> <td width="200" class="menubar" style="background-color:#000;color:#BBB">BBBBBB</td> <td width="200" class="menubar">231</b></td> <td width="200" class="menubar" style="background-color:#000;color:#FFF">FFFFFF</td></tr>	
+	<tr> <td width="200" class="menubar">Yellow</td>  <td width="200" class="menubar">142</b></td> <td width="200" class="menubar" style="background-color:#000;color:#BB0">BBBB00</td> <td width="200" class="menubar">226</b></td> <td width="200" class="menubar" style="background-color:#000;color:#FF0">FFFF00</td></tr>
+	</table></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'>To display code 232 through 255 using 24 bit RGB colors the following hexadecimal values are suggested for the 24 shade grayscale: start out at 8 for the first color and increment the value by 10 for each increment. \x08, \x12, \x1C, \x26, etc.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><table>
+	<tr>
+	<td width="111" class="menubar" style="background-color:#000;color:#080808">232</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#121212">233</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#1C1C1C">234</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#262626">235</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#303030">236</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#3A3A3A">237</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#444444">238</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#4E4E4E">239</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#584858">240</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#626262">241</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#6C6C6C">242</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#767676">243</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#808080">244</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#8A8A8A">245</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#949494">246</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#9E9E9E">247</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#A8A8A8">248</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#B2B2B2">249</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#BCBCBC">250</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#C6C6C6">251</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#D0D0D0">252</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#DADADA">253</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#E4E4E4">254</td>
+	<td width="111" class="menubar" style="background-color:#000;color:#EEEEEE">255</td>
+	</tr></table></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a name='SUPPORT'></a></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'><strong><big>Support</strong></big></td></tr><tr><td></td></tr>
+<tr><td class='promo'>256 color support is available in most MUD clients and terminal emulators that were updated after 2008.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a name='DETECTION'></a></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'><strong><big>Detection</strong></big></td></tr><tr><td></td></tr>
+<tr><td class='promo'>There is no universal standard for the detection or negotiation of 256 color support. The following methods exist:</td></tr><tr><td></td></tr>
+<tr><td class='promo'><table><ul>
+		<tr><td>By using the TTYPE TELNET option and checking for a terminal emulator or mud client known to support 256 colors, such as xterm.</td></tr>
+		<tr><td>By using the TTYPE TELNET option and checking for the -256color, or -truecolor suffix. For example: xterm-256color.</td></tr>
+		<tr><td>By using the TTYPE TELNET option and using the <a href='http://tintin.sf.net/mtts'>MUD Terminal Type Standard</a> to detect 256 color support.</tr></td>
+		</ul></table></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a name='LINKS'></a></td></tr><tr><td></td></tr>
+<tr><td class='promobar' style='line-height:24px;'><strong><big>Links</strong</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'>If you want a link added, you can email me at mudclient@gmail.com.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><strong><big>Clients supporting 256 color</big></strong></td></tr><tr><td></td></tr>
+<tr><td colspan='1'><hr noshade color='#2B3856'></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a href='https://en.wikipedia.org/wiki/Comparison_of_MUD_clients'>Comparison of MUD clients</a> - Wikipedia has a list of MUD clients with 256 color support.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><a href='https://en.wikipedia.org/wiki/Comparison_of_terminal_emulators'>Comparison of terminal emulators</a> - Wikipedia has a list of terminal emulators with 256 color support.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><strong><big>Codebases</big></strong></td></tr><tr><td></td></tr>
+<tr><td colspan='1'><hr noshade color='#2B3856'></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a href='http://www.mudpedia.org/mediawiki/index.php/Comparison_of_MUD_codebases'>Comparison of MUD codebases</a> - Mudpedia contains a list of MUD servers with 256 color support.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><strong><big>Snippets</big></strong></td></tr><tr><td></td></tr>
+<tr><td colspan='1'><hr noshade color='#2B3856'></td></tr><tr><td></td></tr>
+<tr><td class='promo'><a href='http://www.mudbytes.net/files/2596'>256 color parser</a> - Handles ANSI 16 colors and xterm 256 colors.</td></tr><tr><td></td></tr>
+<tr><td class='promo'><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></td></tr><tr><td></td></tr>
+<tr><td class='promo'><br>&nbsp;<br>&nbsp;<br>&nbsp;<br></td></tr><tr><td></td></tr>
+
+
+		</table>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-1978623-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+	</body>
+
+</html>
