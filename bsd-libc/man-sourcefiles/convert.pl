@@ -21,7 +21,7 @@ sub parse{
 	 print "-", grab( "Nm" ), " := ", grab ("Nd");
 	 # library = "Lb"
 	 # files = "In"
-	 grab( "!^Ft" );
+	 while ( ! ( 
 	 while ( $F[$fp] =~ s/^.Ft (.*)\n/$1/ ){
 			 print $F[$fp];
 			 $fp ++;
